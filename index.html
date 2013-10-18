@@ -32,26 +32,30 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>User, Organization and Project Pages</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>There are two basic types of Pages available, User/Organization Pages and Project Pages. The two types of pages are nearly identical, except for a few details.
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+Both types of Pages are served over HTTP, not HTTPS. That doesn't make them inherently less secure, but, it does mean that you shouldn't transact any sensitive information with them (like passwords or credit card numbers).</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>User & Organization Pages</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>User & Organization Pages live in a special repository dedicated to only the Pages files. This repository uses the account name, for example atmos/atmos.github.io
+
+This repository must use the <pre><code>username/username.github.io</code></pre> naming scheme.
+Content from the master branch will be used to build and publish the Pages.
+Tip: You can only use your own account name for a User or Org Pages repository. A repository like joe/bob.github.io will not build Pages.</p>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Project Pages</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Unlike User and Org Pages, Project Pages are kept in the same repository as the project they are for. These pages are similar to User and Org Pages, with a few slight differences:
+
+The gh-pages branch is used to build and publish from.
+A custom domain on user/org pages will apply the same domain redirect to all project pages hosted under that account, unless the project pages use their own custom domain.
+If no custom domain is used, the project pages are served under a subpath of the user pages: <pre><code>username/username.github.io</code></pre>
+Custom 404s will only work if a custom domain is used, otherwise the User Pages 404 is used.</p>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
